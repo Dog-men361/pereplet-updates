@@ -4564,7 +4564,7 @@ async function openWebVersion(entry) {
     nativeUpdateProgressTitle.textContent = `Открываем версию ${entry.version}`;
     nativeUpdateProgressMessage.textContent = 'Книги будут подгружаться по мере чтения.';
     const url = URL.createObjectURL(new Blob([html], { type: 'text/html;charset=utf-8' }));
-    location.replace(url);
+    location.assign(url);
   } catch (error) {
     nativeUpdateProgress.hidden = true;
     nativeUpdateClose.hidden = false;
